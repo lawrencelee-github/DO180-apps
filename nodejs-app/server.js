@@ -1,9 +1,11 @@
+#var createError = require('http-error');
 var createError = require('http-error');
 
 var express = require('express');
 app = express();
 
 app.get('/', function (req, res) {
+#  res.send('Hello World from pod: ' + process.environment.HOSTNAME + '\n')
   res.send('Hello World from pod: ' + process.environment.HOSTNAME + '\n')
 });
 
